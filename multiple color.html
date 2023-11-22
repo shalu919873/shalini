@@ -1,0 +1,30 @@
+<!---wap in js to use of play a sound and with multiple color--->
+<html>
+<head>
+<script>
+function f1()
+{
+var str="0123456789ABCDEF";
+var color="#";
+for(var i=0;i<6;i++)
+{
+color=color+str[Math.floor(Math.random()*16)];
+}
+return color;
+}
+function f2()
+{
+document.getElementById("b1").style="background-image:radial-gradient("+f1()+","+f1()+","+f1()+","+f1()+","+f1()+")";
+window.setTimeout("f2()",10);
+}
+</script>
+</head>
+<body onload="f2()" id="b1">
+<center>
+<h1 style="color:white;text-shadow:5px 5px 5px red;font-size:24px;">
+Design and develop By ER.Shalini Kushwaha</h1>
+<audio controls>
+<source src="chhoti3.mp3"  type="audio/mp3">
+</center>
+</body>
+</html>
